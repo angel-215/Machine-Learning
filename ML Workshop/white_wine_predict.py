@@ -1,0 +1,15 @@
+import joblib
+import numpy as np
+model=joblib.load("white_wine.pkl")
+fa=float(input("enter fixed acidity:"))
+va=float(input("enter volatile acidity:"))
+ca=float(input("enter citric acid:"))
+rs=float(input("enter residual sugar:"))
+c=float(input("enter chlorides:"))
+fsd=float(input("enter free sulphur dioxide:"))
+tsd=float(input("enter total sulphur dioxide:"))
+d=float(input("enter density:"))
+ph=float(input("enter ph:"))
+s=float(input("enter sulphates:"))
+a=float(input("enter alcohol:"))
+print(model.predict(np.array([[fa,va,ca,rs,c,fsd,tsd,d,ph,s,a]])))
